@@ -1,14 +1,4 @@
-.idea
-.idea_modules
-idea.bat
-out
-target
-*.iml
-atlassian-ide-plugin.xml
-log
+.gradle
+build
 
 
-
-
-src/main/resources/db/4kon.lock.db
-src/main/resources/db/4kon.trace.db

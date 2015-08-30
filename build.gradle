@@ -1,0 +1,51 @@
+def kotlinVer = '0.12.613'
+def spekVersion = '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: "kotlin"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://repository.jetbrains.com/all"
+    }
+}
+
+dependencies {
+    //testCompile 'org.jetbrains.spek:spek:0.1-SNAPSHOT'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVer"
+    testCompile "junit:junit:4.11"
+}
+
+buildscript {
+    def kotlinVer2 = '0.12.613'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVer2"
+    }
+}
+
+task customJar(type: Jar) {
+    manifest {
+        attributes firstKey: 'firstValue', secondKey: 'secondValue'
+    }
+    archiveName = 'hello.jar'
+    destinationDir = file("${buildDir}/jars")
+    from sourceSets.main.output
+}
+
+task rumMyMain(type: JavaExec, dependsOn: classes) {
+    main = 'Main'
+    args = "The rain in Spain falls mainly in the plain".split().toList()
+    classpath sourceSets.main.output.classesDir
+    classpath configurations.runtime
+}
+
+task rumMyKot(type: JavaExec, dependsOn: classes) {
+    main = 'model.ModelPackage'
+    args = "The rain in Spain falls mainly in the plain".split().toList()
+    classpath sourceSets.main.output.classesDir
+    classpath configurations.runtime
+}
