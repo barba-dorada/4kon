@@ -17,6 +17,8 @@ import kotlin.math.times
 * javaProj
 */
 
+
+
 data class Account(val name: String)
 
 data class PlanTemplate(val money: Money, val name: String, val subConto: SubConto, val period: PlanPeriod, val firstDate: LocalDate, val lastDate: LocalDate) {
@@ -42,7 +44,7 @@ data class PlanTemplate(val money: Money, val name: String, val subConto: SubCon
             if (date >= from) {
                 result.add(Plan(date, subConto, name, money))
             }
-            //TODO add PlanPeriod implementation
+            //TODO add model.model.PlanPeriod implementation
             date = period.inr(date)
             date = date.plus(1, ChronoUnit.YEARS)
 
@@ -52,25 +54,6 @@ data class PlanTemplate(val money: Money, val name: String, val subConto: SubCon
     }
 }
 
-//TODO generator ->Plan
-enum class PlanPeriod(val chronoUnit:ChronoUnit=ChronoUnit.DAYS ) {
-    WEEKLY(ChronoUnit.WEEKS),
-    MONTHLY(ChronoUnit.MONTHS),
-    DAILY(ChronoUnit.DAYS),
-    YEARLY(ChronoUnit.YEARS),
-    WORKDAY(ChronoUnit.DAYS){
-        override fun inr(date: LocalDate): LocalDate{
-            var nextDay= date.plus(1, chronoUnit)
-            while(nextDay.getDayOfWeek()==DayOfWeek.SATURDAY||nextDay.getDayOfWeek()==DayOfWeek.SUNDAY) nextDay=nextDay.plus(1, chronoUnit)
-            return nextDay
-        }
-    };
-
-
-
-    open fun inr(date: LocalDate): LocalDate = date.plus(1, chronoUnit)
-
-}
 
 data class SubConto(val name: String)
 data class Plan(val date: LocalDate, val subConto: SubConto, val name: String, val money: Money)
@@ -78,21 +61,6 @@ data class Plan(val date: LocalDate, val subConto: SubConto, val name: String, v
 
 data class Fact(val account: Account, val subConto: SubConto, val money: Money, val date: LocalDate)
 data class User(val name: String)
-
-data class Money(val amount: BigDecimal, val cur: Currency = Currency.RUR) {
-    //constructor(amount: Double, cur: Currency = Currency.RUR) : this(BigDecimal.valueOf(amount), cur)
-    constructor(amount: String, cur: Currency = Currency.RUR) : this(BigDecimal(amount, MathContext.DECIMAL64).setScale(2), cur)
-
-    constructor(amount: String, cur: String = "RUR") : this(BigDecimal(amount, MathContext.DECIMAL64).setScale(2), Currency.valueOf(cur))
-
-
-    override fun toString() = "${amount}${cur.s}"
-
-}
-
-enum class Currency(val s: String) {
-    RUR("р"/*"ք"*/), USD("$"), EUR("€"), UAH("гр")
-}
 
 fun d(s: String): LocalDate {
     val formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
@@ -106,7 +74,7 @@ fun d(date:LocalDate):String{
 
 fun main(args: Array<String>) {
     val auto = SubConto("Авто")
-    val pt = PlanTemplate(Money("40000", "RUR"), "CASKO", auto, PlanPeriod.YEARLY, d("10.09.2014"), d("25.09.2017"))
+    val pt = PlanTemplate(Money("40000", "RUR"), "КАСКО", auto, PlanPeriod.YEARLY, d("10.09.2014"), d("25.09.2017"))
     val pt2 = PlanTemplate(Money("350", "RUR"), "обеды", auto, PlanPeriod.WORKDAY, d("17.09.2014"), d("17.09.2017"))
     val pt3 = PlanTemplate(Money("20000", "RUR"), "аванс", auto, PlanPeriod.MONTHLY, d("10.09.2014"), d("17.09.2017"))
     val pt4 = PlanTemplate(Money("40000", "RUR"), "получка", auto, PlanPeriod.MONTHLY, d("20.09.2014"), d("17.09.2017"))
@@ -137,33 +105,6 @@ fun List<Plan>.toString2(): String {
     var s: String = "plans....\n"
     this.forEach { s += "$it\n" }
     return s + "-----\n";
-}
-
-fun Money.convert(currency: Currency): Money {
-    val usdRate = BigDecimal("68.5", MathContext.DECIMAL64)
-    val eurRate = BigDecimal("75.8", MathContext.DECIMAL64)
-    if (this.cur == currency) return this
-
-    var res: BigDecimal? = when (this.cur) {
-        Currency.RUR -> when (currency) {
-            Currency.USD -> amount / usdRate
-            Currency.EUR -> amount.divide(eurRate, 2, RoundingMode.HALF_UP)
-            else -> null
-        }
-        Currency.USD -> when (currency) {
-            Currency.RUR -> amount * usdRate
-            Currency.EUR -> amount * BigDecimal("75.3")
-            else -> null
-        }
-        Currency.EUR -> when (currency) {
-            Currency.RUR -> amount * eurRate
-            Currency.USD -> amount * BigDecimal("75.3")
-            else -> null
-        }
-        else -> null
-    }
-    return Money(res ?: BigDecimal(-1.0), currency)
-
 }
 
 
