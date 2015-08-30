@@ -3,7 +3,7 @@ import ru.cwl.kon.model.Account;
 /**
  * Created by vad on 19.03.2015 20:56.
  */
-public class Main {
+public class MainTestOldModel {
     public static void main(String[] args) {
         Account accounts[] = {
                 createAccount(1, "кошелек", 600, "руб"),
