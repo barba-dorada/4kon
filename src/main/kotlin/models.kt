@@ -12,54 +12,8 @@ import java.util.LinkedList
 import kotlin.math.div
 import kotlin.math.times
 
-/**
-* Created by vad on 23.08.2015 11:33 23:08
-* javaProj
-*/
 
-
-
-data class Account(val name: String)
-
-data class PlanTemplate(val money: Money, val name: String, val subConto: SubConto, val period: PlanPeriod, val firstDate: LocalDate, val lastDate: LocalDate) {
-    fun toPlans(): List<Plan> {
-        val result = ArrayList<Plan>()
-        var i = firstDate;
-        while (i.isBefore(lastDate)) {
-            result.add(Plan(i, subConto, name, money))
-            i = i.plus(1, ChronoUnit.YEARS)
-        }
-
-        return result
-    }
-
-    fun toPlans(from: LocalDate, to: LocalDate): List<Plan> {
-        val result = ArrayList<Plan>()
-        var date = firstDate;
-
-
-
-        while (date <= lastDate) {
-            if (date > to) break
-            if (date >= from) {
-                result.add(Plan(date, subConto, name, money))
-            }
-            //TODO add model.model.PlanPeriod implementation
-            date = period.inr(date)
-            date = date.plus(1, ChronoUnit.YEARS)
-
-        }
-
-        return result
-    }
-}
-
-
-data class SubConto(val name: String)
-data class Plan(val date: LocalDate, val subConto: SubConto, val name: String, val money: Money)
-
-
-data class Fact(val account: Account, val subConto: SubConto, val money: Money, val date: LocalDate)
+data class Fact(val account: Account, val category: Category, val money: Money, val date: LocalDate)
 data class User(val name: String)
 
 fun d(s: String): LocalDate {
@@ -73,7 +27,7 @@ fun d(date:LocalDate):String{
 }
 
 fun main(args: Array<String>) {
-    val auto = SubConto("Авто")
+    val auto = Category("Авто")
     val pt = PlanTemplate(Money("40000", "RUR"), "КАСКО", auto, PlanPeriod.YEARLY, d("10.09.2014"), d("25.09.2017"))
     val pt2 = PlanTemplate(Money("350", "RUR"), "обеды", auto, PlanPeriod.WORKDAY, d("17.09.2014"), d("17.09.2017"))
     val pt3 = PlanTemplate(Money("20000", "RUR"), "аванс", auto, PlanPeriod.MONTHLY, d("10.09.2014"), d("17.09.2017"))

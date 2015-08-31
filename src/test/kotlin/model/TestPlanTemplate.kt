@@ -1,3 +1,5 @@
+package model
+
 import model.*
 import org.junit.After
 import org.junit.Before
@@ -13,8 +15,10 @@ import kotlin.test.assertEquals
 public class JUnit4StringTest {
 
     fun prepareTestData(): List<PlanTemplate> {
-        val sc = SubConto("default")
-        val plans = listOf(PlanTemplate(Money("350"), "обеды", sc, PlanPeriod.WORKDAY, d("01.07.2015"), d("31.12.2020")),
+        // add -sum zarplata:)
+        val sc = Category("default")
+        val plans = listOf(
+                PlanTemplate(Money("350"), "обеды", sc, PlanPeriod.WORKDAY, d("01.07.2015"), d("31.12.2020")),
                 PlanTemplate(Money("600"), "проезд", sc, PlanPeriod.WEEKLY, d("03.07.2015"), d("31.12.2020")),
                 PlanTemplate(Money("45000"), "КАСКО", sc, PlanPeriod.YEARLY, d("10.09.2014"), d("31.12.2020")),
                 PlanTemplate(Money("15000"), "ОСАГО", sc, PlanPeriod.YEARLY, d("10.09.2014"), d("31.12.2020")),

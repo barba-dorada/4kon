@@ -7,14 +7,8 @@ import kotlin.math.div
 import kotlin.math.times
 
 data class Money(val amount: BigDecimal, val cur: Currency = Currency.RUR) {
-    //constructor(amount: Double, cur: Currency = Currency.RUR) : this(BigDecimal.valueOf(amount), cur)
-    //constructor(amount: String, cur: Currency = Currency.RUR) : this(BigDecimal(amount, MathContext.DECIMAL64).setScale(2), cur)
-
     constructor(amount: String, cur: String = "RUR") : this(BigDecimal(amount, MathContext.DECIMAL64).setScale(2), Currency.valueOf(cur))
-
-
     override fun toString() = "${amount}${cur.s}"
-
 }
 
 fun Money.convert(currency: Currency): Money {
@@ -41,5 +35,4 @@ fun Money.convert(currency: Currency): Money {
         else -> null
     }
     return Money(res ?: BigDecimal(-1.0), currency)
-
 }

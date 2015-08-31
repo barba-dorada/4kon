@@ -13,7 +13,6 @@ import java.util.*
  * javaProj
  */
 
-//TODO generator ->Plan
 fun generatePlans(plans: Collection<PlanTemplate>, from: LocalDate, to: LocalDate):List<Plan>{
     val res= ArrayList<Plan>()
 
@@ -25,7 +24,7 @@ fun generatePlans(plans: Collection<PlanTemplate>, from: LocalDate, to: LocalDat
             dateGen(t.firstDate,from,to,t.period.chronoUnit)
         }
         dates forEach {
-            res.add(Plan(it, t.subConto, t.name, t.money))
+            res.add(Plan(it, t.category, t.name, t.money))
         }
     }
     return res;
