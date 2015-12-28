@@ -1,3 +1,5 @@
+package ru.cwl.kon.data;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import ru.cwl.kon.model.Fact;
@@ -34,6 +36,16 @@ public class ReadFaktsFromCsv {
         System.out.println(jsonArray.toString());
     }
 
+    static public JSONArray getFacts(){
+        List<Fact> facts = run();
+
+        JSONArray jsonArray=new JSONArray();
+        for (Fact fact : facts) {
+            JSONObject o = new JSONObject(fact);
+            jsonArray.put(o);
+        }
+        return jsonArray;
+    }
     static public List<Fact> run() {
         // TODO в рескрсы
         String csvFile = "C:\\dev\\proj\\4kon\\src\\main\\resources\\data\\fakts.csv";
