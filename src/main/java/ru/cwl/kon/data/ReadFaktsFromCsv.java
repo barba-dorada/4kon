@@ -37,11 +37,15 @@ public class ReadFaktsFromCsv {
     }
 
     static public JSONArray getFacts(){
+
+        SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+
         List<Fact> facts = run();
 
         JSONArray jsonArray=new JSONArray();
         for (Fact fact : facts) {
             JSONObject o = new JSONObject(fact);
+            o.put("diso",fmt.format(fact.getDate()));
             jsonArray.put(o);
         }
         return jsonArray;
