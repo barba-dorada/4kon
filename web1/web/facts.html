@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "ajax": {url:"/rest/fact",
+                dataSrc: ''},
+                "columns": [
+                    {"data": "date"},
+                    {"data": "amount"},
+                    {"data": "descr1"},
+                    {"data": "id"},
+                    {"data": "subTotal"},
+                    {"data": "account"}
+                ]
+            });
+        });
+    </script>
+<body>
+<table id="example" class="display" cellspacing="0" width="100%">
+    <thead>
+    <tr>
+        <th>дата</th>
+        <th>сумма</th>
+        <th>категория</th>
+        <th>id</th>
+        <th>нар.итог</th>
+        <th>счет</th>
+    </tr>
+    </thead>
+    <tfoot>
+
+        <th>дата</th>
+        <th>сумма</th>
+        <th>категория</th>
+        <th>id</th>
+        <th>нар.итог</th>
+        <th>счет</th>
+
+    </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 package ru.cwl.kon.servlet;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 import ru.cwl.kon.data.ReadFaktsFromCsv;
 
 import javax.servlet.ServletException;
@@ -34,9 +35,10 @@ public class FactServlet extends HttpServlet {
         res.setCharacterEncoding("utf-8");
 
         JSONArray result = ReadFaktsFromCsv.getFacts();
+        /*JSONObject obj = new JSONObject();
+        obj.put("data", result);*/
 
-        res.getWriter()
-                .append(result.toString());
+        res.getWriter().append(result.toString());
     }
 
     @Override
@@ -47,5 +49,10 @@ public class FactServlet extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doDelete(req, resp);
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPut(req, resp);
     }
 }
