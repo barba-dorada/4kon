@@ -14,6 +14,7 @@ public class Fact {
     String descr1;
     String descr2;
     Double subTotal;
+    User user;
 
 
     public int getId() {
@@ -83,5 +84,13 @@ public class Fact {
                 ", descr2='" + descr2 + '\'' +
                 ", subTotal=" + subTotal +
                 '}';
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public User getUser() {
+        return user;
     }
 }
