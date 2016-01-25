@@ -12,7 +12,7 @@ import com.hascode.tutorial.servlet.DatePrintServlet;
 public class TomcatEmbeddedRunner {
     public void startServer() throws LifecycleException {
         Tomcat tomcat = new Tomcat();
-        tomcat.setPort(80);
+        tomcat.setPort(8088);
         File base = new File(System.getProperty("java.io.tmpdir"));
         Context rootCtx = tomcat.addContext("/app", base.getAbsolutePath());
         Tomcat.addServlet(rootCtx, "dateServlet", new DatePrintServlet());
