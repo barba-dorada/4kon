@@ -1,11 +1,14 @@
 package ru.cwl.kon.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 
 /**
  * Created by vad on 18.12.2015 22:33
  * 4kon
  */
+
+@XmlRootElement
 public class Fact {
     int id;
     Date date;

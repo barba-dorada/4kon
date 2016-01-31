@@ -25,14 +25,24 @@ dependencies {
 //    compile "org.eclipse.jetty:jetty-server:$jettyVer"
 //    compile "org.eclipse.jetty:jetty-servlet:$jettyVer"
 
-    compile "org.apache.tomcat:tomcat-catalina:$tomcatVer"
-    compile "org.apache.tomcat:tomcat-util:$tomcatVer"
+//Minimal dependencies
     compile "org.apache.tomcat.embed:tomcat-embed-core:$tomcatVer"
+    compile "org.apache.tomcat.embed:tomcat-embed-logging-juli:$tomcatVer"
+//Optional dependency for JSP
     compile "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVer"
+
 
     compile "com.sun.jersey:jersey-core:1.19"
     compile "com.sun.jersey:jersey-server:1.19"
     compile "com.sun.jersey:jersey-servlet:1.19"
+    compile "com.sun.jersey:jersey-client:1.19"
+    compile "com.sun.jersey:jersey-json:1.19"
+
+
+
+//    compile 'org.glassfish:javax.json:1.0.4'
+
+
 
 /*
 *Core Server: jersey-core.jar, jersey-server.jar, jsr311-api.jar, asm.jar
