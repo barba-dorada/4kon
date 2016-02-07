@@ -9,11 +9,19 @@ public class User {
     String password;
     String name;
 
+    public User() {
+    }
+
     public User(int id, String login, String password, String name) {
         this.id = id;
         this.login = login;
         this.password = password;
         this.name = name;
+    }
+
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
     }
 
     public int getId() {
@@ -50,5 +58,15 @@ public class User {
     public User setName(String name) {
         this.name = name;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

@@ -38,11 +38,12 @@ dependencies {
     compile "com.sun.jersey:jersey-client:1.19"
     compile "com.sun.jersey:jersey-json:1.19"
 
+    compile "com.h2database:h2:1.4.191"
 
+//    compile "org.springframework:spring-jdbc"
+    compile 'org.springframework:spring-jdbc:4.2.4.RELEASE'
 
 //    compile 'org.glassfish:javax.json:1.0.4'
-
-
 
 /*
 *Core Server: jersey-core.jar, jersey-server.jar, jsr311-api.jar, asm.jar
@@ -51,7 +52,6 @@ JAXB support: (Used in the advanced example) jaxb-impl.jar, jaxb-api.jar, activa
 JSON support: (Used in the advanced example) jersey-json.jar
 * */
     testCompile "junit:junit:4.11"
-
 
 //    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVer"
 
