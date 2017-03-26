@@ -1,0 +1,100 @@
+def kotlinVer = '0.12.613'
+def spekVersion = '0.1-SNAPSHOT'
+//def tomcatVer='7.0.41'
+def tomcatVer = '8.0.30'
+//def jettyVer = '9.3.6.v20151106'
+
+apply plugin: 'java'
+//apply plugin: "kotlin"
+
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://repository.jetbrains.com/all"
+    }
+}
+
+dependencies {
+    //testCompile 'org.jetbrains.spek:spek:0.1-SNAPSHOT'
+
+
+    compile "org.json:json:20151123"
+
+//    compile "org.eclipse.jetty:jetty-server:$jettyVer"
+//    compile "org.eclipse.jetty:jetty-servlet:$jettyVer"
+
+//Minimal dependencies
+    compile "org.apache.tomcat.embed:tomcat-embed-core:$tomcatVer"
+    compile "org.apache.tomcat.embed:tomcat-embed-logging-juli:$tomcatVer"
+//Optional dependency for JSP
+    compile "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVer"
+
+
+    compile "com.sun.jersey:jersey-core:1.19"
+    compile "com.sun.jersey:jersey-server:1.19"
+    compile "com.sun.jersey:jersey-servlet:1.19"
+    compile "com.sun.jersey:jersey-client:1.19"
+    compile "com.sun.jersey:jersey-json:1.19"
+
+    compile "com.h2database:h2:1.4.191"
+
+//    compile "org.springframework:spring-jdbc"
+    compile 'org.springframework:spring-jdbc:4.2.4.RELEASE'
+
+//    compile 'org.glassfish:javax.json:1.0.4'
+
+/*
+*Core Server: jersey-core.jar, jersey-server.jar, jsr311-api.jar, asm.jar
+Core Client: (Used for testing) jersey-client.jar
+JAXB support: (Used in the advanced example) jaxb-impl.jar, jaxb-api.jar, activation.jar, stax-api.jar, wstx-asl.jar
+JSON support: (Used in the advanced example) jersey-json.jar
+* */
+    testCompile "junit:junit:4.11"
+
+//    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVer"
+
+}
+
+task(selectServer, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.hascode.tutorial.app.Main'
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+}
+
+defaultTasks 'selectServer'
+
+/*buildscript {
+    def kotlinVer2 = '0.12.613'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVer2"
+    }
+}*/
+
+task customJar(type: Jar) {
+    manifest {
+        attributes firstKey: 'firstValue', secondKey: 'secondValue'
+    }
+    archiveName = 'hello.jar'
+    destinationDir = file("${buildDir}/jars")
+    from sourceSets.main.output
+}
+
+task rumMyMain(type: JavaExec, dependsOn: classes) {
+    main = 'Main'
+    args = "The rain in Spain falls mainly in the plain".split().toList()
+    classpath sourceSets.main.output.classesDir
+    classpath configurations.runtime
+}
+
+/*
+task rumMyKot(type: JavaExec, dependsOn: classes) {
+    main = 'model.ModelPackage'
+    args = "The rain in Spain falls mainly in the plain".split().toList()
+    classpath sourceSets.main.output.classesDir
+    classpath configurations.runtime
+}*/
