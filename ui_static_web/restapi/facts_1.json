@@ -1,0 +1,2307 @@
+[
+  {
+    "account": "в.тинькоф",
+    "amount": 219.97,
+    "category": "нач",
+    "date": "2017-02-07",
+    "description": "",
+    "id": 1,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": 1650.00,
+    "category": "нач",
+    "date": "2017-02-07",
+    "description": "",
+    "id": 2,
+    "user": "В"
+  },
+  {
+    "account": "в.карта_зп",
+    "amount": 0.00,
+    "category": "нач",
+    "date": "2017-02-07",
+    "description": "",
+    "id": 3,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 100,
+    "category": "нач",
+    "date": "2017-02-07",
+    "description": "",
+    "id": 4,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": 1430000,
+    "category": "нач",
+    "date": "2017-02-07",
+    "description": "",
+    "id": 5,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": 841,
+    "category": "нач",
+    "date": "2017-02-07",
+    "description": "",
+    "id": 6,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 4213,
+    "category": "нач",
+    "date": "2017-02-07",
+    "description": "",
+    "id": 7,
+    "user": "Л"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -250.00,
+    "category": "еда.обед",
+    "date": "2017-02-08",
+    "description": "",
+    "id": 8,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -500.00,
+    "category": "ЖКХ",
+    "date": "2017-02-08",
+    "description": "поверка счетчика",
+    "id": 9,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": -10000,
+    "category": "перевод",
+    "date": "2017-02-08",
+    "description": "",
+    "id": 10,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 10000.00,
+    "category": "перевод",
+    "date": "2017-02-08",
+    "description": "",
+    "id": 11,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -614.00,
+    "category": "Варя школа",
+    "date": "2017-02-08",
+    "description": "иголочка Варе",
+    "id": 12,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -1500,
+    "category": "перевод",
+    "date": "2017-02-08",
+    "description": "",
+    "id": 13,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 1500,
+    "category": "перевод",
+    "date": "2017-02-08",
+    "description": "",
+    "id": 14,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -602,
+    "category": "аптека",
+    "date": "2017-02-08",
+    "description": "аптека",
+    "id": 15,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -370,
+    "category": "обед",
+    "date": "2017-02-08",
+    "description": "обед",
+    "id": 16,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -900,
+    "category": "продукты",
+    "date": "2017-02-08",
+    "description": "фрукты, мяско, хлеб, булочки",
+    "id": 17,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -102,
+    "category": "сигареты",
+    "date": "2017-02-08",
+    "description": "",
+    "id": 18,
+    "user": "Л"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -300.00,
+    "category": "еда.обед",
+    "date": "2017-02-09",
+    "description": "",
+    "id": 19,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -165,
+    "category": "развлеченья",
+    "date": "2017-02-09",
+    "description": "журнал",
+    "id": 20,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -1000,
+    "category": "транспорт",
+    "date": "2017-02-09",
+    "description": "проезд метро",
+    "id": 21,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -50,
+    "category": "транспорт",
+    "date": "2017-02-09",
+    "description": "поездка трол",
+    "id": 22,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -105,
+    "category": "сигареты",
+    "date": "2017-02-09",
+    "description": "сигареты",
+    "id": 23,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -325,
+    "category": "обед",
+    "date": "2017-02-09",
+    "description": "еда",
+    "id": 24,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -700,
+    "category": "продукты",
+    "date": "2017-02-09",
+    "description": "овощи фрукты",
+    "id": 25,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -1200,
+    "category": "перевод",
+    "date": "2017-02-10",
+    "description": "",
+    "id": 26,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 1200,
+    "category": "перевод",
+    "date": "2017-02-10",
+    "description": "",
+    "id": 27,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -180,
+    "category": "продукты",
+    "date": "2017-02-10",
+    "description": "булочки",
+    "id": 28,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -1000,
+    "category": "перевод",
+    "date": "2017-02-13",
+    "description": "",
+    "id": 29,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": 1000,
+    "category": "перевод",
+    "date": "2017-02-13",
+    "description": "",
+    "id": 30,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -200,
+    "category": "еда",
+    "date": "2017-02-12",
+    "description": "еда. парковка",
+    "id": 31,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": -20000,
+    "category": "перевод",
+    "date": "2017-02-12",
+    "description": "",
+    "id": 32,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": 20000,
+    "category": "перевод",
+    "date": "2017-02-12",
+    "description": "",
+    "id": 33,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -10438,
+    "category": "ремонт",
+    "date": "2017-02-12",
+    "description": "дверь #медв",
+    "id": 34,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -7068,
+    "category": "ремонт",
+    "date": "2017-02-12",
+    "description": "дверь и сушка #медв",
+    "id": 35,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": 5443,
+    "category": "ремонт",
+    "date": "2017-02-12",
+    "description": "дверь возврат #медв",
+    "id": 36,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -11,
+    "category": "продукты",
+    "date": "2017-02-12",
+    "description": "",
+    "id": 37,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": 77322.95,
+    "category": "зарплата",
+    "date": "2017-02-13",
+    "description": "",
+    "id": 38,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "еда.обед",
+    "date": "2017-02-13",
+    "description": "",
+    "id": 39,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "еда.обед",
+    "date": "2017-02-14",
+    "description": "",
+    "id": 40,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -1427,
+    "category": "ремонт",
+    "date": "2017-02-12",
+    "description": "смеси, пена",
+    "id": 41,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -380,
+    "category": "авто",
+    "date": "2017-02-12",
+    "description": "умывалка",
+    "id": 42,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -1800,
+    "category": "перевод",
+    "date": "2017-02-13",
+    "description": "",
+    "id": 43,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 1800,
+    "category": "перевод",
+    "date": "2017-02-14",
+    "description": "",
+    "id": 44,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -3000,
+    "category": "перевод",
+    "date": "2017-02-14",
+    "description": "",
+    "id": 45,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": 3000,
+    "category": "перевод",
+    "date": "2017-02-14",
+    "description": "",
+    "id": 46,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -561.17,
+    "category": "продукты",
+    "date": "2017-02-14",
+    "description": "Билла",
+    "id": 47,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-02-14",
+    "description": "",
+    "id": 48,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-02-14",
+    "description": "",
+    "id": 49,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -105,
+    "category": "сигареты",
+    "date": "2017-02-14",
+    "description": "сигареты",
+    "id": 50,
+    "user": "Л"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -205,
+    "category": "жкх",
+    "date": "2017-02-15",
+    "description": "тел медв",
+    "id": 51,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -382.12,
+    "category": "жкх",
+    "date": "2017-02-15",
+    "description": "электр медв",
+    "id": 52,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -4554.38,
+    "category": "жкх",
+    "date": "2017-02-15",
+    "description": "квартплата медв",
+    "id": 53,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -950,
+    "category": "в.кошелек",
+    "date": "2017-02-14",
+    "description": "",
+    "id": 54,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -2000,
+    "category": "развлеченья",
+    "date": "2017-02-15",
+    "description": "билеты в театр",
+    "id": 55,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-02-15",
+    "description": "",
+    "id": 56,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -16263.67,
+    "category": "продукты",
+    "date": "2017-02-15",
+    "description": "",
+    "id": 57,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -50200,
+    "category": "кредиты",
+    "date": "2017-02-15",
+    "description": "кред Лера",
+    "id": 58,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -2000,
+    "category": "в долг",
+    "date": "2017-02-15",
+    "description": "Оксане",
+    "id": 59,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -105,
+    "category": "сигареты",
+    "date": "2017-02-15",
+    "description": "сигареты",
+    "id": 60,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -642,
+    "category": "канцтовары",
+    "date": "2017-02-15",
+    "description": "",
+    "id": 61,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -105,
+    "category": "кофе",
+    "date": "2017-02-15",
+    "description": "",
+    "id": 62,
+    "user": "Л"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-02-16",
+    "description": "",
+    "id": 63,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -100,
+    "category": "еда",
+    "date": "2017-02-15",
+    "description": "",
+    "id": 64,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -1000,
+    "category": "транспорт",
+    "date": "2017-02-16",
+    "description": "",
+    "id": 65,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -3000,
+    "category": "перевод",
+    "date": "2017-02-16",
+    "description": "",
+    "id": 66,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 3000,
+    "category": "перевод",
+    "date": "2017-02-16",
+    "description": "",
+    "id": 67,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -100,
+    "category": "связь",
+    "date": "2017-02-16",
+    "description": "пополнение телефон",
+    "id": 68,
+    "user": "Л"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": 9608.32,
+    "category": "зарплата",
+    "date": "2017-02-17",
+    "description": "отпускные 20-22 февр",
+    "id": 69,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-02-17",
+    "description": "",
+    "id": 70,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -99,
+    "category": "хоз.товары",
+    "date": "2017-02-17",
+    "description": "",
+    "id": 71,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -671,
+    "category": "обед",
+    "date": "2017-02-17",
+    "description": "",
+    "id": 72,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": 30000,
+    "category": "зарплата",
+    "date": "2017-02-17",
+    "description": "",
+    "id": 73,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -5000,
+    "category": "родственники",
+    "date": "2017-02-17",
+    "description": "Софье",
+    "id": 74,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -600,
+    "category": "связь",
+    "date": "2017-02-22",
+    "description": "инет смольная",
+    "id": 75,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -3076,
+    "category": "хоз.товары",
+    "date": "2017-02-22",
+    "description": "электрика, пленка, порог",
+    "id": 76,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -100,
+    "category": "еда",
+    "date": "2017-02-21",
+    "description": "",
+    "id": 77,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -1011,
+    "category": "еда",
+    "date": "2017-02-24",
+    "description": "",
+    "id": 78,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -5456,
+    "category": "хоз.товары",
+    "date": "2017-02-24",
+    "description": "",
+    "id": 79,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -1746,
+    "category": "ресторан",
+    "date": "2017-02-25",
+    "description": "",
+    "id": 80,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-02-27",
+    "description": "",
+    "id": 81,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -200,
+    "category": "хоз.товары",
+    "date": "2017-02-27",
+    "description": "амбюшуры",
+    "id": 82,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -100,
+    "category": "ресторан",
+    "date": "2017-02-27",
+    "description": "",
+    "id": 83,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -15000,
+    "category": "маме",
+    "date": "2017-02-27",
+    "description": "",
+    "id": 84,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -410,
+    "category": "сигареты",
+    "date": "2017-02-27",
+    "description": "4 пачки",
+    "id": 85,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 46000,
+    "category": "зп",
+    "date": "2017-02-27",
+    "description": "премия",
+    "id": 86,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 2000,
+    "category": "в долг",
+    "date": "2017-02-27",
+    "description": "Оксана отдала",
+    "id": 87,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -30,
+    "category": "комиссия",
+    "date": "2017-02-27",
+    "description": "бк",
+    "id": 88,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -200,
+    "category": "связь",
+    "date": "2017-02-27",
+    "description": "мой телефон",
+    "id": 89,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -350,
+    "category": "связь",
+    "date": "2017-02-27",
+    "description": "мой айпад",
+    "id": 90,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -478,
+    "category": "продукты",
+    "date": "2017-02-27",
+    "description": "пицца",
+    "id": 91,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -4760,
+    "category": "перевод",
+    "date": "2017-02-27",
+    "description": "",
+    "id": 92,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 4760,
+    "category": "перевод",
+    "date": "2017-02-27",
+    "description": "",
+    "id": 93,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -49000,
+    "category": "перевод",
+    "date": "2017-02-27",
+    "description": "",
+    "id": 94,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 49000,
+    "category": "перевод",
+    "date": "2017-02-27",
+    "description": "",
+    "id": 95,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": 6970,
+    "category": "проценты",
+    "date": "2017-02-27",
+    "description": "",
+    "id": 96,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -40000,
+    "category": "перевод",
+    "date": "2017-02-27",
+    "description": "",
+    "id": 97,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": 40000,
+    "category": "перевод",
+    "date": "2017-02-27",
+    "description": "",
+    "id": 98,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -773,
+    "category": "продукты",
+    "date": "2017-02-27",
+    "description": "магнит у мамы",
+    "id": 99,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -450,
+    "category": "подарки",
+    "date": "2017-02-27",
+    "description": "подарки 23 ф.",
+    "id": 100,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -1800,
+    "category": "продукты",
+    "date": "2017-02-27",
+    "description": "Варе конфеты, Л.А. коньяк",
+    "id": 101,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -6500,
+    "category": "здоровье",
+    "date": "2017-02-27",
+    "description": "соляная пещера",
+    "id": 102,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -500,
+    "category": "Варе",
+    "date": "2017-02-27",
+    "description": "на продукты для праздника в школе",
+    "id": 103,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -180,
+    "category": "еда",
+    "date": "2017-02-27",
+    "description": "макдак",
+    "id": 104,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -256,
+    "category": "хоз.товары",
+    "date": "2017-02-27",
+    "description": "Варе коврик д/в",
+    "id": 105,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -1441.17,
+    "category": "потеряла",
+    "date": "2017-02-27",
+    "description": "???",
+    "id": 106,
+    "user": "Л"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-02-28",
+    "description": "",
+    "id": 107,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -460,
+    "category": "связь",
+    "date": "2017-02-28",
+    "description": "",
+    "id": 108,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -577.34,
+    "category": "продукты",
+    "date": "2017-02-28",
+    "description": "",
+    "id": 109,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-01",
+    "description": "",
+    "id": 110,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-02",
+    "description": "",
+    "id": 111,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 112,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -300,
+    "category": "вещи",
+    "date": "2017-03-03",
+    "description": "2а провода для зарядки(али)",
+    "id": 113,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -550,
+    "category": "жкх",
+    "date": "2017-03-03",
+    "description": "инет, медв",
+    "id": 114,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -900,
+    "category": "транспорт",
+    "date": "2017-03-03",
+    "description": "такси февраль",
+    "id": 115,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -800,
+    "category": "подарки",
+    "date": "2017-03-03",
+    "description": "детям лампочки",
+    "id": 116,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 46000,
+    "category": "зп",
+    "date": "2017-03-03",
+    "description": "за февраль",
+    "id": 117,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -1121,
+    "category": "продукты",
+    "date": "2017-03-03",
+    "description": "продукты билла",
+    "id": 118,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -1550,
+    "category": "транспорт",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 119,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -210,
+    "category": "сигареты",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 120,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -428,
+    "category": "продукты",
+    "date": "2017-03-03",
+    "description": "зелень, картошка, овощи",
+    "id": 121,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -32,
+    "category": "транспорт",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 122,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -157,
+    "category": "еда",
+    "date": "2017-03-03",
+    "description": "кофе",
+    "id": 123,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -600,
+    "category": "еда",
+    "date": "2017-03-03",
+    "description": "за 2 дня",
+    "id": 124,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -420,
+    "category": "еда",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 125,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": -8939.59,
+    "category": "перевод",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 126,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 8939.59,
+    "category": "перевод",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 127,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -1323,
+    "category": "косметика",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 128,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -269,
+    "category": "музыка",
+    "date": "2017-03-03",
+    "description": "сем.доступ",
+    "id": 129,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -100,
+    "category": "связь",
+    "date": "2017-03-03",
+    "description": "пополнение моего телефона авт.",
+    "id": 130,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 665,
+    "category": "перевод",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 131,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -665,
+    "category": "перевод",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 132,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -6970,
+    "category": "перевод",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 133,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": 6970,
+    "category": "перевод",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 134,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -200,
+    "category": "сигареты",
+    "date": "2017-03-03",
+    "description": "",
+    "id": 135,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -700,
+    "category": "хоз.товары",
+    "date": "2017-03-04",
+    "description": "перекл для душа",
+    "id": 136,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -2050,
+    "category": "топливо",
+    "date": "2017-03-04",
+    "description": "",
+    "id": 137,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -100,
+    "category": "авто",
+    "date": "2017-03-04",
+    "description": "парковка",
+    "id": 138,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -1260,
+    "category": "подарки",
+    "date": "2017-03-04",
+    "description": "цветы",
+    "id": 139,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -679.9,
+    "category": "хоз.товары",
+    "date": "2017-03-04",
+    "description": "оби",
+    "id": 140,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -2890,
+    "category": "одежда",
+    "date": "2017-03-04",
+    "description": "каляев",
+    "id": 141,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -895,
+    "category": "подарки",
+    "date": "2017-03-04",
+    "description": "цветы",
+    "id": 142,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": 4000,
+    "category": "перевод",
+    "date": "2017-03-05",
+    "description": "",
+    "id": 143,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -4000,
+    "category": "перевод",
+    "date": "2017-03-05",
+    "description": "",
+    "id": 144,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-06",
+    "description": "",
+    "id": 145,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -500,
+    "category": "подарки",
+    "date": "2017-03-06",
+    "description": "работа",
+    "id": 146,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -1700,
+    "category": "транспорт",
+    "date": "2017-03-07",
+    "description": "проездной 60",
+    "id": 147,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -150,
+    "category": "продукты",
+    "date": "2017-03-07",
+    "description": "",
+    "id": 148,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": 106.74,
+    "category": "доход.%",
+    "date": "2017-03-07",
+    "description": "%%",
+    "id": 149,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": 456,
+    "category": "доход.%",
+    "date": "2017-03-07",
+    "description": "кешбек",
+    "id": 150,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -138,
+    "category": "обсуж карты",
+    "date": "2017-03-07",
+    "description": "",
+    "id": 151,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-06",
+    "description": "",
+    "id": 152,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -350,
+    "category": "авто",
+    "date": "2017-03-08",
+    "description": "мойка",
+    "id": 153,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -1293,
+    "category": "подарки",
+    "date": "2017-03-07",
+    "description": "",
+    "id": 154,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -2200,
+    "category": "подарки",
+    "date": "2017-03-08",
+    "description": "3 букета",
+    "id": 155,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -420,
+    "category": "сигареты",
+    "date": "2017-03-08",
+    "description": "4 пачки",
+    "id": 156,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -2000,
+    "category": "продукты",
+    "date": "2017-03-08",
+    "description": "Билла",
+    "id": 157,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -60,
+    "category": "моб.банк",
+    "date": "2017-03-08",
+    "description": "",
+    "id": 158,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": -15000.41,
+    "category": "перевод",
+    "date": "2017-03-08",
+    "description": "на карту",
+    "id": 159,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": 15000.41,
+    "category": "перевод",
+    "date": "2017-03-08",
+    "description": "",
+    "id": 160,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -10500.69,
+    "category": "перевод",
+    "date": "2017-03-08",
+    "description": "",
+    "id": 161,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 10500.69,
+    "category": "перевод",
+    "date": "2017-03-08",
+    "description": "",
+    "id": 162,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -7670.44,
+    "category": "перевод",
+    "date": "2017-03-08",
+    "description": "",
+    "id": 163,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 7670.44,
+    "category": "перевод",
+    "date": "2017-03-08",
+    "description": "",
+    "id": 164,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -6000,
+    "category": "Варя",
+    "date": "2017-03-08",
+    "description": "Рисование Варя",
+    "id": 165,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-10",
+    "description": "",
+    "id": 166,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -600,
+    "category": "лекарства",
+    "date": "2017-03-10",
+    "description": "",
+    "id": 167,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": 56531.83,
+    "category": "зарплата",
+    "date": "2017-03-10",
+    "description": "",
+    "id": 168,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -310,
+    "category": "обед",
+    "date": "2017-03-10",
+    "description": "",
+    "id": 169,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -2000,
+    "category": "красота неземная",
+    "date": "2017-03-10",
+    "description": "ресницы",
+    "id": 170,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -1500,
+    "category": "красота неземная",
+    "date": "2017-03-10",
+    "description": "покараска небольшая стрижка",
+    "id": 171,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -2500,
+    "category": "красота неземная",
+    "date": "2017-03-10",
+    "description": "эпиляция, маникюр, педикюр",
+    "id": 172,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -315,
+    "category": "сигареты",
+    "date": "2017-03-10",
+    "description": "3 пачки",
+    "id": 173,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -3500,
+    "category": "Варя",
+    "date": "2017-03-10",
+    "description": "кроссовки 2 пары",
+    "id": 174,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -2700,
+    "category": "ресторан",
+    "date": "2017-03-10",
+    "description": "пивбар",
+    "id": 175,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -205,
+    "category": "обед",
+    "date": "2017-03-13",
+    "description": "обед",
+    "id": 176,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -850,
+    "category": "Варя",
+    "date": "2017-03-13",
+    "description": "кружка Варе",
+    "id": 177,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -1380,
+    "category": "продукты",
+    "date": "2017-03-13",
+    "description": "прдукты",
+    "id": 178,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -270,
+    "category": "обед",
+    "date": "2017-03-14",
+    "description": "обед",
+    "id": 179,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": -5000,
+    "category": "перевод",
+    "date": "2017-03-14",
+    "description": "",
+    "id": 180,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 5000,
+    "category": "перевод",
+    "date": "2017-03-14",
+    "description": "",
+    "id": 181,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -5000,
+    "category": "квартира",
+    "date": "2017-03-14",
+    "description": "аванс нотариуса",
+    "id": 182,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -2500,
+    "category": "вещи",
+    "date": "2017-03-14",
+    "description": "сумочка",
+    "id": 183,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -2000,
+    "category": "перевод",
+    "date": "2017-03-14",
+    "description": "",
+    "id": 184,
+    "user": "Л"
+  },
+  {
+    "account": "л.тинькоф",
+    "amount": 2000,
+    "category": "перевод",
+    "date": "2017-03-14",
+    "description": "",
+    "id": 185,
+    "user": "Л"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -500,
+    "category": "обед",
+    "date": "2017-03-14",
+    "description": "",
+    "id": 186,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-15",
+    "description": "",
+    "id": 187,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -205,
+    "category": "жкх",
+    "date": "2017-03-15",
+    "description": "тел #медв",
+    "id": 188,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -400.82,
+    "category": "жкх",
+    "date": "2017-03-15",
+    "description": "электричество #медв",
+    "id": 189,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -5233.33,
+    "category": "жкх",
+    "date": "2017-03-15",
+    "description": "жкх #медв",
+    "id": 190,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": -450000,
+    "category": "перевод",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 191,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 450000,
+    "category": "перевод",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 192,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -2550,
+    "category": "продукты",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 193,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -355,
+    "category": "обед",
+    "date": "2017-03-17",
+    "description": "обед",
+    "id": 194,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -315,
+    "category": "сигареты",
+    "date": "2017-03-17",
+    "description": "3 пачки",
+    "id": 195,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -32,
+    "category": "транспорт",
+    "date": "2017-03-17",
+    "description": "электричка",
+    "id": 196,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -1188.44,
+    "category": "обед",
+    "date": "2017-03-17",
+    "description": "за 3 дня, с кофе и ватрушками",
+    "id": 197,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -115,
+    "category": "развлечения",
+    "date": "2017-03-17",
+    "description": "музыка",
+    "id": 198,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": -50000,
+    "category": "перевод",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 199,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 50000,
+    "category": "перевод",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 200,
+    "user": "Л"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-16",
+    "description": "",
+    "id": 201,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -50200,
+    "category": "кредиты",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 202,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": 550,
+    "category": "перевод",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 203,
+    "user": "В"
+  },
+  {
+    "account": "л.тинькоф",
+    "amount": -550,
+    "category": "перевод",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 204,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 205,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": 10000,
+    "category": "перевод",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 206,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -10000,
+    "category": "перевод",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 207,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": 40000,
+    "category": "перевод",
+    "date": "2017-03-20",
+    "description": "",
+    "id": 208,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -40000,
+    "category": "перевод",
+    "date": "2017-03-20",
+    "description": "",
+    "id": 209,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -100,
+    "category": "издержки",
+    "date": "2017-03-20",
+    "description": "сбер обсуживание",
+    "id": 210,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -5300,
+    "category": "подарки",
+    "date": "2017-03-18",
+    "description": "Соне на др",
+    "id": 211,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -600,
+    "category": "транспорт",
+    "date": "2017-03-18",
+    "description": "",
+    "id": 212,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -300,
+    "category": "обед",
+    "date": "2017-03-17",
+    "description": "",
+    "id": 213,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": 30000,
+    "category": "зарплата",
+    "date": "2017-03-20",
+    "description": "",
+    "id": 214,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-20",
+    "description": "",
+    "id": 215,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -234.3,
+    "category": "продукты",
+    "date": "2017-03-20",
+    "description": "",
+    "id": 216,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": -14071.05,
+    "category": "%%",
+    "date": "2017-03-21",
+    "description": "",
+    "id": 217,
+    "user": "В"
+  },
+  {
+    "account": "л.сбер.счет",
+    "amount": -910928.95,
+    "category": "перевод",
+    "date": "2017-03-21",
+    "description": "",
+    "id": 218,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 910928.95,
+    "category": "перевод",
+    "date": "2017-03-21",
+    "description": "",
+    "id": 219,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -1210000,
+    "category": "квартира",
+    "date": "2017-03-22",
+    "description": "аванс",
+    "id": 220,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -3790,
+    "category": "квартира",
+    "date": "2017-03-22",
+    "description": "ячейка",
+    "id": 221,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -8500,
+    "category": "квартира",
+    "date": "2017-03-22",
+    "description": "регистрация",
+    "id": 222,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -22000,
+    "category": "квартира",
+    "date": "2017-03-22",
+    "description": "нотариус, доверенность",
+    "id": 223,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -300,
+    "category": "обед",
+    "date": "2017-03-22",
+    "description": "",
+    "id": 224,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -598,
+    "category": "обед",
+    "date": "2017-03-22",
+    "description": "",
+    "id": 225,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -250,
+    "category": "обед",
+    "date": "2017-03-21",
+    "description": "",
+    "id": 226,
+    "user": "В"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -25200,
+    "category": "квартира",
+    "date": "2017-03-22",
+    "description": "страховка",
+    "id": 227,
+    "user": "В"
+  },
+  {
+    "account": "л.тинькоф",
+    "amount": -200,
+    "category": "связь",
+    "date": "2017-03-22",
+    "description": "мой мобил.",
+    "id": 228,
+    "user": "Л"
+  },
+  {
+    "account": "л.тинькоф",
+    "amount": -175,
+    "category": "кофе",
+    "date": "2017-03-22",
+    "description": "кофе",
+    "id": 229,
+    "user": "Л"
+  },
+  {
+    "account": "л.тинькоф",
+    "amount": -335,
+    "category": "обед",
+    "date": "2017-03-22",
+    "description": "обед",
+    "id": 230,
+    "user": "Л"
+  },
+  {
+    "account": "л.тинькоф",
+    "amount": -192,
+    "category": "обед",
+    "date": "2017-03-22",
+    "description": "макдак",
+    "id": 231,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -30,
+    "category": "издержки",
+    "date": "2017-03-22",
+    "description": "комиссия сбера маэстро",
+    "id": 232,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -1899,
+    "category": "красота неземная",
+    "date": "2017-03-22",
+    "description": "маникюр",
+    "id": 233,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -760,
+    "category": "ресторан",
+    "date": "2017-03-22",
+    "description": "макдак с варей",
+    "id": 234,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -899,
+    "category": "одежда",
+    "date": "2017-03-22",
+    "description": "кофточка",
+    "id": 235,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -160,
+    "category": "развлечения",
+    "date": "2017-03-22",
+    "description": "журнал",
+    "id": 236,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -244,
+    "category": "развлечения",
+    "date": "2017-03-22",
+    "description": "кино",
+    "id": 237,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -5000,
+    "category": "здоровье",
+    "date": "2017-03-22",
+    "description": "маме стоматолог",
+    "id": 238,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -1500,
+    "category": "продукты",
+    "date": "2017-03-22",
+    "description": "мед",
+    "id": 239,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -4995.84,
+    "category": "здоровье",
+    "date": "2017-03-22",
+    "description": "см клиника",
+    "id": 240,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -1000,
+    "category": "транспорт",
+    "date": "2017-03-22",
+    "description": "пополнение метро",
+    "id": 241,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -5000,
+    "category": "перевод",
+    "date": "2017-03-22",
+    "description": "",
+    "id": 242,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 5000,
+    "category": "перевод",
+    "date": "2017-03-22",
+    "description": "",
+    "id": 243,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -315,
+    "category": "сигареты",
+    "date": "2017-03-22",
+    "description": "",
+    "id": 244,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.мк",
+    "amount": -540,
+    "category": "перевод",
+    "date": "2017-03-24",
+    "description": "",
+    "id": 245,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": 540,
+    "category": "перевод",
+    "date": "2017-03-24",
+    "description": "",
+    "id": 246,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": -105,
+    "category": "сигареты",
+    "date": "2017-03-24",
+    "description": "",
+    "id": 247,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -2715.25,
+    "category": "продукты",
+    "date": "2017-03-24",
+    "description": "",
+    "id": 248,
+    "user": "Л"
+  },
+  {
+    "account": "л.сбер.виза",
+    "amount": -2000,
+    "category": "перевод",
+    "date": "2017-03-24",
+    "description": "",
+    "id": 249,
+    "user": "Л"
+  },
+  {
+    "account": "л.тинькоф",
+    "amount": 2000,
+    "category": "перевод",
+    "date": "2017-03-24",
+    "description": "",
+    "id": 250,
+    "user": "Л"
+  },
+  {
+    "account": "л.тинькоф",
+    "amount": -610,
+    "category": "связь",
+    "date": "2017-03-24",
+    "description": "инет смольная",
+    "id": 251,
+    "user": "Л"
+  },
+  {
+    "account": "л.кошелек",
+    "amount": 46000,
+    "category": "зп",
+    "date": "2017-03-24",
+    "description": "",
+    "id": 252,
+    "user": "Л"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -500,
+    "category": "обед",
+    "date": "2017-03-24",
+    "description": "2дня.",
+    "id": 253,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -5000,
+    "category": "родственники",
+    "date": "2017-03-24",
+    "description": "Соне",
+    "id": 254,
+    "user": "В"
+  },
+  {
+    "account": "в.тинькоф",
+    "amount": -641,
+    "category": "ресторан",
+    "date": "2017-03-25",
+    "description": "",
+    "id": 255,
+    "user": "В"
+  },
+  {
+    "account": "в.кошелек",
+    "amount": -1000,
+    "category": "топливо",
+    "date": "2017-03-26",
+    "description": "",
+    "id": 256,
+    "user": "В"
+  }
+]
+

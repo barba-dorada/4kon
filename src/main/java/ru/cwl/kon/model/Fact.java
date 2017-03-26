@@ -1,6 +1,8 @@
 package ru.cwl.kon.model;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -9,11 +11,21 @@ import java.util.Date;
 public class Fact {
     long id;
     String user;
-    Date date;
+    LocalDate date;
     String account;
     String category;
     BigDecimal amount;
     String description;
+
+    public LocalDateTime getInserted() {
+        return inserted;
+    }
+
+    public void setInserted(LocalDateTime inserted) {
+        this.inserted = inserted;
+    }
+
+    LocalDateTime inserted;
 
     public long getId() {
         return id;
@@ -31,11 +43,11 @@ public class Fact {
         this.user = user;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
