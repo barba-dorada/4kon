@@ -11,9 +11,9 @@ compileJava.options.encoding = 'UTF-8'
 
 repositories {
     mavenCentral()
-    maven {
+/*    maven {
         url "http://repository.jetbrains.com/all"
-    }
+    }*/
 }
 
 dependencies {

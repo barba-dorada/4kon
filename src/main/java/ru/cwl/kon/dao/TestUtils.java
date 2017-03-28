@@ -4,9 +4,12 @@ import ru.cwl.kon.model.Fact;
 import ru.cwl.kon.model.User;
 
 import java.io.*;
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Created by vad on 24.01.2016 20:58
@@ -39,14 +42,18 @@ public class TestUtils {
                 if (src[0].equals("")) break;
 
                 Fact fact = new Fact();
-                fact.setDate(df.parse(src[0]));
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+
+
+                LocalDate localDate = LocalDate.parse(src[0], formatter);
+                fact.setDate(localDate);
                 fact.setId(0);
                 fact.setAccount(src[1]);
-                fact.setAmount(Double.parseDouble(src[2].replace(",", ".")));
-                fact.setDescr1(src[3]);
-                fact.setDescr1(src[4]);
-                fact.setSubTotal(Double.parseDouble(src[8].replace(",", ".")));
-                fact.setUser(user);
+                fact.setAmount(new BigDecimal(src[2].replace(",", ".")));
+                fact.setDescription(src[3]);
+                //fact.setDescr1(src[4]);
+                //fact.setSubTotal(Double.parseDouble(src[8].replace(",", ".")));
+                fact.setUser("user");
 
                 dao.save(fact);
 
@@ -56,8 +63,7 @@ public class TestUtils {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
+
         }
     }
 
