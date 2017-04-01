@@ -16,62 +16,61 @@
             });
 
             //отправляю GET запрос и получаю ответ
-          /*  $$a({
-                type:'get',//тип запроса: get,post либо head
-                url:'ajax.php',//url адрес файла обработчика
-                data:{'q':'1'},//параметры запроса
-                response:'text',//тип возвращаемого ответа text либо xml
-                success:function (data) {//возвращаемый результат от сервера
-                    $$('result',$$('result').innerHTML+'<br />'+data);
-                }
-            });*/
+            /*  $$a({
+             type:'get',//тип запроса: get,post либо head
+             url:'ajax.php',//url адрес файла обработчика
+             data:{'q':'1'},//параметры запроса
+             response:'text',//тип возвращаемого ответа text либо xml
+             success:function (data) {//возвращаемый результат от сервера
+             $$('result',$$('result').innerHTML+'<br />'+data);
+             }
+             });*/
         }
 
         function SendPost() {
             //отправляю POST запрос и получаю ответ
             $.ajax({
-                type:'post',
+                type: 'post',
                 url: 'facts_1.json',
                 dataType: 'json',
                 data: 'data',
                 success: 'callback',
                 onerror: 'callback'
             });
-    /*        $$a({
-                type:'post',//тип запроса: get,post либо head
-                url:'ajax.php',//url адрес файла обработчика
-                data:{'z':'1'},//параметры запроса
-                response:'text',//тип возвращаемого ответа text либо xml
-                success:function (data) {//возвращаемый результат от сервера
-                    $$('result',$$('result').innerHTML+'<br />'+data);
-                }
-            });*/
+            /*        $$a({
+             type:'post',//тип запроса: get,post либо head
+             url:'ajax.php',//url адрес файла обработчика
+             data:{'z':'1'},//параметры запроса
+             response:'text',//тип возвращаемого ответа text либо xml
+             success:function (data) {//возвращаемый результат от сервера
+             $$('result',$$('result').innerHTML+'<br />'+data);
+             }
+             });*/
         }
 
         function SendHead() {
             //отправляю HEAD запрос и получаю заголовок
             $$a({
-                type:'head',//тип запроса: get,post либо head
-                url:'ajax.php',//url адрес файла обработчика
-                response:'text',//тип возвращаемого ответа text либо xml
-                success:function (data) {//возвращаемый результат от сервера
-                    $$('result',$$('result').innerHTML+'<br />'+data);
+                type: 'head',//тип запроса: get,post либо head
+                url: 'ajax.php',//url адрес файла обработчика
+                response: 'text',//тип возвращаемого ответа text либо xml
+                success: function (data) {//возвращаемый результат от сервера
+                    $$('result', $$('result').innerHTML + '<br />' + data);
                 }
             });
         }
 
-        function f1() {
-            $.getJSON('restapi/facts_1.json', function(data){
-                var items = [];
-
-                $.each(data, function(key, val){
-                    items.push('<li id="' + key + '">' + val.id+' '+val.user+' '+ val.date +' '+val.account+' '+val.category+' '+val.amount+' '+val.description+ '</li>');
+        function fillTable() {
+            $.getJSON('restapi/facts_1.json', function (data) {
+                var body = $('#messages tbody');
+                $.each(data, function (key, val) {
+                    var tr = $('<tr>', {
+                        id: key,
+                        html: '<td>' + val.id + '</td><td>' + val.user + '</td><td>' + val.date + '</td><td>' + val.account + '</td><td>' + val.category +
+                        '</td><td>' + val.amount + '</td><td>' + val.description + '</td>'
+                    });
+                    body.append(tr);
                 });
-
-                $('<ul/>', {
-                    'class': 'my-new-list',
-                    html: items.join('')
-                }).appendTo('body');
             });
 
         }
@@ -80,13 +79,23 @@
     </script>
 </head>
 <body>
-привет!!!
-<div id="result">Тут будет ответ от сервера</div><br /><br />
-<div onclick="SendGet();">Отправить GET запрос через Ajax</div><br />
-<div onclick="SendPost();">Отправить POST запрос через Ajax</div><br />
-<div onclick="SendHead();">Отправить HEAD запрос через Ajax</div><br />
-<div onclick="f1();">f1() через Ajax</div><br />
 
+привет!!!
+<div id="result">Тут будет ответ от сервера</div>
+<br/><br/>
+<div onclick="SendGet();">Отправить GET запрос через Ajax</div>
+<br/>
+<div onclick="SendPost();">Отправить POST запрос через Ajax</div>
+<br/>
+<div onclick="SendHead();">Отправить HEAD запрос через Ajax</div>
+<br/>
+<div onclick="fillTable();">f1() через Ajax</div>
+<br/>
+
+ПРИВЕТТТТТТТТ!!!!
+<table id="messages">
+    <tbody></tbody>
+</table>
 
 </body>
 </html>
