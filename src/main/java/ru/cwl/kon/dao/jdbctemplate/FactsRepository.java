@@ -25,12 +25,12 @@ public class FactsRepository implements Repository<Fact, Integer> {
             public Fact mapRow(ResultSet rs, int rowNum) throws SQLException {
                 Fact f = new Fact();
                 f.setId(rs.getInt("FACT_ID"));
-                f.setUser(new User());
+                f.setUser("new User()");
                 rs.getInt("USER_ID");
                 rs.getInt("ACCOUNT_ID");
                 rs.getInt("CATEGORY_ID");
-                f.setAmount(rs.getDouble("AMOUNT"));
-                f.setDescr1(rs.getString("DESCRIPTION"));
+                //f.setAmount(rs.getDouble("AMOUNT"));
+                f.setDescription(rs.getString("DESCRIPTION"));
 
                 return f;
             }
@@ -41,8 +41,8 @@ public class FactsRepository implements Repository<Fact, Integer> {
         final String sql = "INSERT INTO PUBLIC.FACTS (USER_ID, DATE, AMOUNT, ACCOUNT_ID, CATEGORY_ID, DESCRIPTION)" +
                 " VALUES (?,?,?,?,?,?)";
         jdbcTemplate.update(sql,
-                f.getUser().getId(), f.getDate(), f.getAmount(),
-                1, 1, f.getDescr1());
+                "f.getUser().getId()", f.getDate(), f.getAmount(),
+                1, 1, f.getDescription());
 
         return f;
     }
