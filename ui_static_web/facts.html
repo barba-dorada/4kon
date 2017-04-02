@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container">
+    <div class="panel" >
+        <!-- Default panel contents -->
+        <div class="panel-heading">Факты
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default" onclick="fillTable()">загрузить</button>
+                <button type="button" class="btn btn-default">Middle</button>
+            </div>
+        </div>
+        <!--  <div class="panel-body">
+
+          </div>-->
+        <table id="messages" class="table-condensed table-bordered table-hover table-striped">
+            <!--  <table class="table table-bordered">-->
+            <thead>
+            <tr>
+                <th></th>
+                <th>ВЛ</th>
+                <th>дата</th>
+                <th>счет</th>
+                <th>???</th>
+                <th style="text-align: right">сумма</th>
+                <th>коммент</th>
+            </tr>
+            </thead>
+
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+
+<script type="text/javascript">
+    function fillTable() {
+        $.getJSON('restapi/facts_1.json', function (data) {
+            var body = $('#messages tbody');
+            $.each(data, function (key, val) {
+                var tr = $('<tr>', {
+                    id: key,
+                    html: /*'<td>'+key+'</td>'+    */  '<td>' + val.id + '</td><td>' + val.user + '</td><td>' + formatDate(val.date) + '</td><td>' + val.account + '</td><td>' + val.category +
+                    '</td><td align="right">' + formatNumber(val.amount) + '</td><td>' + val.description + '</td>'
+                });
+                body.append(tr);
+            });
+        });
+    }
+    function formatDate(dt) {
+        var re = /(\d+)-(\d+)-(\d+)/;
+        var newstr = dt.replace(re, "$3.$2.$1")
+        return newstr;
+    }
+    function formatNumber(n) {
+        var s = n.toFixed(2).toString();
+        return s.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1&#8239;");
+    }
+</script>
+
+</body>
+</html>
