@@ -1,20 +1,33 @@
-var d0={"un2":"В","date":"08.04.2017","account":"в.тинькофф","category":"продукты","amount":"10.00","description":"в магните"};
-function loadData() {
-    $('#frm1 input').each(function (a,b){
-        b.value=d0[b.id];
-    });
-}
-$(function () {
-    console.log('dd123');
-    $('#btn1').click(function () {
-        console.log('@@@');
-        var o={};
-        $('#frm1 input').each(function (a,b) {
-            o[b.id]=b.value;
-        });
 
-        var json=JSON.stringify(o);
-        console.log(json);
-    });
+
+$(function () {
+    var d0 = {
+        "un2": "В",
+        "date": "08.04.2017",
+        "account": "в.тинькофф",
+        "category": "продукты",
+        "amount": "10.00",
+        "description": "в магните"
+    };
+    $('#btn1').click(saveData);
     $('#btn2').click(loadData);
-})
+    $('#btn3').click(printData);
+
+    function printData() {
+        var json = JSON.stringify(d0);
+        console.log(json);
+    }
+
+    function loadData() {
+        $('#frm1 input').each(function (a, b) {
+            b.value = d0[b.id];
+        });
+    }
+
+    function saveData() {
+        $('#frm1 input').each(function (a, b) {
+            d0[b.id] = b.value;
+        });
+    }
+    loadData();
+});
