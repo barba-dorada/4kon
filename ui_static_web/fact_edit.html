@@ -36,23 +36,13 @@
 </div>
 
 
-<!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">56426542654 jhgkjhg jhg
-            ...
-        </div>
-    </div>
-</div>
 
 <!-- Small modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
 
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
     <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
+        <div id="frm1" class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">добавить факт</h4>
@@ -78,8 +68,8 @@
                 <div>
                     <label for="amount">сумма</label>
                     <input class="form-control" id="amount" value="0.00"/>
-                </div>
-                <div>
+               <!-- </div>
+                <div>-->
                     <label for="description">коммент</label>
                     <input class="form-control" id="description" />
                 </div>
@@ -87,6 +77,8 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">закрыть</button>
                 <button type="button" class="btn btn-primary">сохранить</button>
+                <button id="btn1" type="button" class="btn btn-default">run</button>
+                <button id="btn2" type="button" class="btn btn-default">load</button>
             </div>
         </div>
     </div>
@@ -115,5 +107,8 @@
 <script src="js/jquery.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
+<script src="js/fact_edit.js">
+
+</script>
 </body>
 </html>
