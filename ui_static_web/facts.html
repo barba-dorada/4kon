@@ -20,7 +20,7 @@
 <body>
 
 <div class="container">
-    <div class="panel" >
+    <div class="panel">
         <!-- Default panel contents -->
         <div class="panel-heading">Факты
             <div class="btn-group" role="group" aria-label="...">
@@ -51,21 +51,19 @@
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.js"></script>
+<script src="js/jquery.tmpl.js"></script>
+
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
-
+<script id="factsTemplate" type="text/x-jquery-tmpl">
+    <tr><td>${id}</td><td>${user}</td><td>${formatDate(date)}</td><td>${account}</td><td>${category}</td>
+    <td align="right">${formatNumber(amount)}</td><td>${description}</td></tr>
+</script>
 <script type="text/javascript">
     function fillTable() {
         $.getJSON('restapi/facts_1.json', function (data) {
-            var body = $('#messages tbody');
-            $.each(data, function (key, val) {
-                var tr = $('<tr>', {
-                    id: key,
-                    html: /*'<td>'+key+'</td>'+    */  '<td>' + val.id + '</td><td>' + val.user + '</td><td>' + formatDate(val.date) + '</td><td>' + val.account + '</td><td>' + val.category +
-                    '</td><td align="right">' + formatNumber(val.amount) + '</td><td>' + val.description + '</td>'
-                });
-                body.append(tr);
-            });
+            $('#messages tbody').empty();
+            $('#factsTemplate').tmpl(data).appendTo('#messages tbody');
         });
     }
     function formatDate(dt) {
