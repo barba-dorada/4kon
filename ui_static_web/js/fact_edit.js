@@ -1,8 +1,9 @@
+/*
 
-
+ */
 $(function () {
     var d0 = {
-        "un2": "В",
+        "userCode": "В",
         "date": "08.04.2017",
         "account": "в.тинькофф",
         "category": "продукты",
