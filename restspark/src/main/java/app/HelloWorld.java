@@ -3,8 +3,6 @@ package app;
 import spark.Request;
 import spark.Response;
 
-import java.util.Map;
-
 import static spark.Spark.*;
 
 // * 19.04.2017 add static content
