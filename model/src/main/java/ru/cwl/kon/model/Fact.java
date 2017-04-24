@@ -3,7 +3,6 @@ package ru.cwl.kon.model;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * Created by adm on 09.07.2016.
