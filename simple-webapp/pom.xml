@@ -8,8 +8,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>simple-webapp</artifactId>
     <packaging>war</packaging>
-    <name>simple-webapp Maven Webapp</name>
+    <name>simple-webapp (servlet)</name>
     <url>http://maven.apache.org</url>
+
     <dependencies>
 
     </dependencies>

@@ -13,7 +13,7 @@
         <module>persist</module>
         <module>restspark</module>
         <module>webbootstrap</module>
-
+        <module>simple-webapp</module>
     </modules>
 
 
