@@ -24,7 +24,7 @@ public class Fact {
         this.inserted = inserted;
     }
 
-    LocalDateTime inserted;
+    LocalDateTime inserted=LocalDateTime.now();
 
     public long getId() {
         return id;
@@ -80,5 +80,19 @@ public class Fact {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Fact{" +
+                "id=" + id +
+                ", user='" + user + '\'' +
+                ", date=" + date +
+                ", account='" + account + '\'' +
+                ", category='" + category + '\'' +
+                ", amount=" + amount +
+                ", description='" + description + '\'' +
+                ", inserted=" + inserted +
+                '}';
     }
 }
