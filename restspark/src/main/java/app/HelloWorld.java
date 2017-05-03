@@ -1,17 +1,21 @@
 package app;
 
-import spark.Request;
-import spark.Response;
+import ru.cwl.dao.FactDao;
+import ru.cwl.dao.simple.SimpleFactDao;
+import ru.cwl.dao.util.TestUtils;
+import spark.Filter;
+
+import javax.json.bind.Jsonb;
+import javax.json.bind.JsonbBuilder;
 
 import static spark.Spark.*;
 
 // * 19.04.2017 add static content
 // TODO: 19.04.2017 log level for jetty -> ERROR
-// TODO: 19.04.2017 facts rest api
+// * 19.04.2017 facts rest api 2.5.2017
 public class HelloWorld {
 
     public static void main(String[] args) {
-        HelloWorld hw = new HelloWorld();
         if (true) {
             String projectDir = System.getProperty("user.dir");
             String staticDir = "/ui_static_web";
@@ -19,36 +23,30 @@ public class HelloWorld {
         } else {
             staticFiles.location("/public");
         }
-        //staticFiles.externalLocation("C:\\dev\\projects\\4kon\\ui_static_web");
         before("/*", (q, a) -> System.out.println("Received api call"));
-        path("/hello", () -> {
-            get("", hw::getAll);
-            get("/:id", HelloWorld::getById);
-            post("", (req, res) -> "Hello World(post)");
-            delete("/:id", (req, res) -> "Hello World(delete:id)");
-            put("/:id", (req, res) -> "Hello World(put:id)");
-        });
-        FactController fc = new FactController();
+
+        FactDao fd = new SimpleFactDao();
+        TestUtils.loadFactsFromCsvFile(fd);
+        FactController fc = new FactController(fd);
+        Jsonb jsonb = JsonbBuilder.create();
+        Filter filterAddCT = (request, response) -> {
+            response.type("application/json;charset=UTF-8");
+        };
+
         path("/api/fact", () -> {
-            get("", fc::getAll);
-            get("/:id", fc::getById);
-            post("", fc::create);
+            //todo можно обойтись одним фильтром?
+            //before(filterAddCT);
+            before("", filterAddCT);
+            before("/*", filterAddCT);
+
+            get("", fc::getAll, jsonb::toJson);
+            post("", fc::create, jsonb::toJson);
+
+            get("/:id", fc::getById, jsonb::toJson);
             delete("/:id", fc::delete);
-            put("/:id", fc::update);
+            put("/:id", fc::update, jsonb::toJson);
         });
 
-/*        for (Map.Entry<Object, Object> entry : System.getProperties().entrySet()) {
-            System.out.printf("%s:%s\n",entry.getKey(),entry.getValue());
-        }*/
-
-        System.out.println("http://localhost:4567/hello");
-    }
-
-    private static String getById(Request req, Response resp) {
-        return "Hello World(get:" + req.params(":id") + ")";
-    }
-
-    public String getAll(Request req, Response resp) {
-        return "Hello World(get)";
+        System.out.println("http://localhost:4567/api/fact");
     }
 }

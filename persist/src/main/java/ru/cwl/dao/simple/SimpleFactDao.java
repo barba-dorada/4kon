@@ -31,7 +31,10 @@ public class SimpleFactDao implements FactDao {
 
     @Override
     public Fact update(Integer id, Fact v) {
-        return null;
+        getById(id);
+        v.setId(id);
+        map.put(id,v);
+        return v;
     }
 
     @Override
