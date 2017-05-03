@@ -158,7 +158,8 @@
 </script>
 <script type="text/javascript">
     function fillTable() {
-        $.getJSON('restapi/facts_1.json', function (data) {
+       // $.getJSON('restapi/facts_1.json', function (data) {
+        $.getJSON('api/fact', function (data) {
             $('#messages tbody').empty();
             $('#factsTemplate').tmpl(data).appendTo('#messages tbody');
         });

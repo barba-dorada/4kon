@@ -16,6 +16,7 @@ import static spark.Spark.*;
 public class HelloWorld {
 
     public static void main(String[] args) {
+        // add static content
         if (true) {
             String projectDir = System.getProperty("user.dir");
             String staticDir = "/ui_static_web";
@@ -33,6 +34,13 @@ public class HelloWorld {
             response.type("application/json;charset=UTF-8");
         };
 
+        /*
+        Code Description
+400 Bad Request.
+401 Unauthorized.
+403 Forbidden.
+404 Not Found.
+         */
         path("/api/fact", () -> {
             //todo можно обойтись одним фильтром?
             //before(filterAddCT);
