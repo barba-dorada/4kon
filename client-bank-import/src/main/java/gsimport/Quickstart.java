@@ -26,6 +26,7 @@ import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Quickstart {
@@ -117,17 +118,19 @@ public class Quickstart {
                 System.out.printf("%s, %s\n", row.get(0), row.get(4));
             }
         }}*/
+
+        String spreadsheetId = "1osb5cKizoLCfwQEH9m5upMkl0advMd-aMXYREPBM5Ac";
+
         {
-            String spreadsheetId = "1osb5cKizoLCfwQEH9m5upMkl0advMd-aMXYREPBM5Ac";
 
             String range = "факты!A2:H";
-            ValueRange response = service.spreadsheets().values().get(spreadsheetId, range).setValueRenderOption("UNFORMATTED_VALUE").execute();
+            //ValueRange response = service.spreadsheets().values().get(spreadsheetId, range).setValueRenderOption("UNFORMATTED_VALUE").execute();
 //            service.spreadsheets().values().get("","").
-            List<List<Object>> values = response.getValues();
-            if (values == null || values.size() == 0) {
+            List<List<Object>> values = readRange(service,spreadsheetId,range);//response.getValues();
+            if ( values.size() == 0) {
                 System.out.println("No data found.");
             } else {
-                int n=1;
+                int n = 2;
                 System.out.println("ФАКТЫ");
                 for (List row : values) {
 
@@ -148,10 +151,20 @@ public class Quickstart {
         }
 
 
-
-
-
     }
 
+    static List<List<Object>> readRange(Sheets service, String spreadsheetId, String range){
+        try {
+            ValueRange response = service.spreadsheets().values().get(spreadsheetId, range).setValueRenderOption("UNFORMATTED_VALUE").execute();
+            List<List<Object>> values = response.getValues();
+            if(values!=null&& values.size()!=0){
+                return values;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return Collections.EMPTY_LIST;
+
+    }
 
 }
