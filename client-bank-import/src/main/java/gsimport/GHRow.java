@@ -9,14 +9,14 @@ import java.time.LocalDate;
  * Created by tischenko on 11.09.2017.
  */
 public class GHRow {
-    String user;
-    LocalDate date;
-    String acc;
-    String sunc;
-    BigDecimal sum;
-    String description;
-    BigDecimal sumAfter;
-    String month;
+    public String user;
+    public LocalDate date;
+    public String acc;
+    public String sunc;
+    public BigDecimal sum;
+    public String description;
+    public BigDecimal sumAfter;
+    public String month;
 
     @Override
     public String toString() {

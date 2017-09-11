@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class ReadCSV {
     public static void main(String[] args) throws IOException {
-        String fileName2 ="/csv/v/operations Fri Dec 09 00_00_00 MSK 2016-Sat Sep 09 22_00_51 MSK 2017.csv";
+        String fileName2 = "/csv/v/operations Fri Dec 09 00_00_00 MSK 2016-Sat Sep 09 22_00_51 MSK 2017.csv";
 
         String fileName = "/csv/v/operations Thu Aug 10 12_36_54 MSK 2017-Sat Sep 09 22_00_51 MSK 2017.csv";
 

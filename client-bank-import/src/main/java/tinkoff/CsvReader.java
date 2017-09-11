@@ -19,7 +19,7 @@ import java.util.List;
 public class CsvReader {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
 
-    List<Row> read(Reader reader) throws IOException {
+    public List<Row> read(Reader reader) throws IOException {
         final CSVParser parser = new CSVParser(reader, CSVFormat.DEFAULT.withDelimiter(';').withFirstRecordAsHeader());
         ArrayList<Row> result = new ArrayList<Row>();
         try {
