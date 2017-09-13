@@ -98,6 +98,14 @@ public class Quickstart {
     private static void merge(ArrayList<GHRow> a, ArrayList<Row> b) {
 
 
+        mergeSum(a, b);
+
+
+        mergePairs(a, b);
+
+    }
+
+    private static void mergeSum(ArrayList<GHRow> a, ArrayList<Row> b) {
         Iterator<Row> i = b.iterator();
         while (i.hasNext()) {
             Row r = i.next();
@@ -112,10 +120,6 @@ public class Quickstart {
                 }
             }
         }
-
-
-        mergePairs(a, b);
-
     }
 
     private static void mergePairs(ArrayList<GHRow> a, ArrayList<Row> b) {
