@@ -8,6 +8,7 @@ package app;
 
 import gsimport.GHRow;
 import gsimport.GSheetConnector;
+import javafx.util.Pair;
 import tinkoff.CsvReader;
 import tinkoff.Row;
 
@@ -20,6 +21,7 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Predicate;
 
 import static java.util.stream.Collectors.toList;
 
@@ -36,7 +38,7 @@ public class Quickstart {
         List<GHRow> factsList = readAndExtractFacts(values);
 
         //testLera(factsList);
-        testVad(factsList, Month.AUGUST);
+        testVad(factsList, Month.SEPTEMBER);
 
 
     }
@@ -52,8 +54,8 @@ public class Quickstart {
 
         List<Row> res2 = res.stream()
                 .filter(r -> r.getOperationDate().getMonth() == month)
-                .filter(r->r.getStatus().equals("OK"))
-                .filter(r->r.getCardNumber().equals("*9819") || r.getCardNumber().equals(""))
+                .filter(r -> r.getStatus().equals("OK"))
+                .filter(r -> r.getCardNumber().equals("*9819") || r.getCardNumber().equals(""))
                 .collect(toList());
 
         ArrayList<GHRow> a = new ArrayList<GHRow>(rrr);
@@ -63,7 +65,7 @@ public class Quickstart {
 
         BigDecimal c1 = print(b);
         BigDecimal c2 = print2(a);
-        System.out.printf("c1-c2: %s",c1.subtract(c2));
+        System.out.printf("c1-c2: %s", c1.subtract(c2));
 
     }
 
@@ -71,11 +73,11 @@ public class Quickstart {
         // TODO: 13.09.2017 добавить печать заготовков
         // TODO: 13.09.2017 Заменить 2 процедуры одной
         System.out.println("========================");
-        BigDecimal c2=BigDecimal.ZERO;
+        BigDecimal c2 = BigDecimal.ZERO;
 
         for (GHRow row : a) {
             System.out.println(row);
-            c2=c2.add(row.sum);
+            c2 = c2.add(row.sum);
 
         }
         System.out.println(c2);
@@ -84,10 +86,10 @@ public class Quickstart {
 
     private static BigDecimal print(ArrayList<Row> b) {
         System.out.println("========================");
-        BigDecimal c1=BigDecimal.ZERO;
+        BigDecimal c1 = BigDecimal.ZERO;
         for (Row row : b) {
             System.out.println(row);
-            c1=c1.add(row.getSum());
+            c1 = c1.add(row.getSum());
         }
         System.out.println(c1);
         return c1;
@@ -96,15 +98,14 @@ public class Quickstart {
     private static void merge(ArrayList<GHRow> a, ArrayList<Row> b) {
 
 
-
         Iterator<Row> i = b.iterator();
-        while(i.hasNext()){
+        while (i.hasNext()) {
             Row r = i.next();
 
             Iterator<GHRow> i2 = a.iterator();
             while (i2.hasNext()) {
                 GHRow ghRow = i2.next();
-                if(r.getSum().compareTo(ghRow.sum)==0){
+                if (r.getSum().compareTo(ghRow.sum) == 0) {
                     i.remove();
                     i2.remove();
                     break;
@@ -113,10 +114,56 @@ public class Quickstart {
         }
 
 
- //       "обед","Рестораны","J HOUSE LTD";
-//       "перевод" "Наличные"
+        mergePairs(a, b);
+
+    }
+
+    private static void mergePairs(ArrayList<GHRow> a, ArrayList<Row> b) {
+        List<Pair<Predicate<GHRow>, Predicate<Row>>> pairs = new ArrayList<>();
+        pairs.add(new Pair<>(r -> "обед".equals(r.sunc), r -> r.getCategory().contains("Рестораны") && r.getDescription().contains("J HOUSE LTD")));
+        pairs.add(new Pair<>(r -> "продукты".equals(r.sunc), r -> r.getCategory().contains("Супермаркеты")));
+        pairs.add(new Pair<>(r -> "%%".equals(r.sunc), r -> r.getCategory().contains("Другое")));
+        pairs.add(new Pair<>(r -> "зарплата".equals(r.sunc), r -> r.getCategory().contains("Финан. услуги")));
+
+        for (Pair<Predicate<GHRow>, Predicate<Row>> pair : pairs) {
 
 
+            aaa:
+            while (true) {
+
+
+                List<GHRow> fa = a.stream().filter(pair.getKey()).collect(toList());
+                List<Row> fb = b.stream().filter(pair.getValue()).collect(toList());
+                int fbSize = fb.size();
+
+                for (GHRow ghRow : fa) {
+                    BigDecimal s0 = ghRow.sum;
+
+                    for (int firstIdx = 0; firstIdx < fbSize; firstIdx++) {
+                        for (int lasIdx = firstIdx; lasIdx < fbSize; lasIdx++) {
+                            BigDecimal sum = BigDecimal.ZERO;
+
+                            for (int k = firstIdx; k <= lasIdx; k++) {
+                                sum = sum.add(fb.get(k).getSum());
+                            }
+
+                            if (s0.compareTo(sum) == 0) {
+                                a.remove(ghRow);
+                                for (int m = lasIdx; m >= firstIdx; m--) {
+                                    b.remove(fb.get(m));
+                                }
+                                continue aaa;
+                            }
+
+                        }
+                    }
+
+
+                    //remove items from a&b
+                }
+                break;
+            }
+        }
     }
 
     private static List<Row> getRowsFromCsv(String fileName) throws IOException {
@@ -170,7 +217,7 @@ public class Quickstart {
                 }
                 r.acc = (String) value.get(2);
                 r.sunc = (String) value.get(3);
-                if(value.get(4) instanceof BigDecimal) {
+                if (value.get(4) instanceof BigDecimal) {
                     r.sum = (BigDecimal) value.get(4);
                 }
                 r.description = value.get(5).toString();
