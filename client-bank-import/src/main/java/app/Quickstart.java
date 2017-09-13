@@ -42,7 +42,7 @@ public class Quickstart {
         }*/
 
         // Лера тинькоф август
-        Month month = Month.APRIL;
+        Month month = Month.AUGUST;
         List<GHRow> rrr = factsList.stream()
                 .filter(r -> r.acc.equalsIgnoreCase("л.тинькоф"))
                 .filter(r -> r.date.getMonth() == month)
@@ -139,8 +139,9 @@ public class Quickstart {
                 }
                 r.acc = (String) value.get(2);
                 r.sunc = (String) value.get(3);
-                r.sum = (BigDecimal) value.get(4);
-
+                if(value.get(4) instanceof BigDecimal) {
+                    r.sum = (BigDecimal) value.get(4);
+                }
                 r.description = value.get(5).toString();
                 r.sumAfter = (BigDecimal) value.get(6);
                 r.sumAfter = r.sumAfter.setScale(2, BigDecimal.ROUND_HALF_UP);
@@ -148,7 +149,7 @@ public class Quickstart {
 
                 result.add(r);
             } catch (Exception e) {
-                System.out.printf("%s %s", count, value);
+                System.err.printf("%s %s", count, value);
                 e.printStackTrace();
             }
             count++;
