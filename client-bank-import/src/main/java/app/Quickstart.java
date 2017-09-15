@@ -21,6 +21,7 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 import static java.util.stream.Collectors.toList;
@@ -38,7 +39,10 @@ public class Quickstart {
         List<GHRow> factsList = readAndExtractFacts(values);
 
         //testLera(factsList);
-        testVad(factsList, Month.SEPTEMBER);
+        for (Month month : Month.values()) {
+
+            testVad(factsList, month);
+        }
 
 
     }
@@ -50,7 +54,7 @@ public class Quickstart {
                 .filter(r -> r.date.getMonth() == month)
                 .collect(toList());
 
-        List<Row> res = getRowsFromCsv("/csv/v/operations Fri Dec 09 00_00_00 MSK 2016-Sat Sep 09 22_00_51 MSK 2017.csv");
+        List<Row> res = getRowsFromCsv("/csv/v/operations_all.csv");
 
         List<Row> res2 = res.stream()
                 .filter(r -> r.getOperationDate().getMonth() == month)
@@ -60,6 +64,11 @@ public class Quickstart {
 
         ArrayList<GHRow> a = new ArrayList<GHRow>(rrr);
         ArrayList<Row> b = new ArrayList<Row>(res2);
+
+        BigDecimal sa = getSum(a, e -> e.sum);
+        BigDecimal sb = getSum(b, e -> e.getSum());
+        System.out.printf("a: %s, b: %s, a-b: %s\n",sa,sb, sa.subtract(sb));
+
 
         merge(a, b);
 
@@ -97,12 +106,16 @@ public class Quickstart {
 
     private static void merge(ArrayList<GHRow> a, ArrayList<Row> b) {
 
-
-        mergeSum(a, b);
-
-
         mergePairs(a, b);
+        mergeSum(a, b);
+    }
 
+    static <T>BigDecimal getSum(List<T> l, Function<T,BigDecimal> f){
+        BigDecimal result = BigDecimal.ZERO;
+        for (T t : l) {
+            result=result.add(f.apply(t));
+        }
+        return result;
     }
 
     private static void mergeSum(ArrayList<GHRow> a, ArrayList<Row> b) {
@@ -172,7 +185,6 @@ public class Quickstart {
 
     private static List<Row> getRowsFromCsv(String fileName) throws IOException {
         final Reader reader = new InputStreamReader(Quickstart.class.getResourceAsStream(fileName), "windows-1251");
-
         CsvReader csvReader = new CsvReader();
         return csvReader.read(reader);
     }
