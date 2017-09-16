@@ -24,13 +24,13 @@ public class HelloWorld {
         } else {
             staticFiles.location("/public");
         }
-        before("/*", (q, a) -> System.out.println("Received api call"));
+        before("/*", (q, a) -> System.out.println("api call: "+q.requestMethod()+" "+q.pathInfo()));
 
         FactDao fd = new SimpleFactDao();
         TestUtils.loadFactsFromCsvFile(fd);
         FactController fc = new FactController(fd);
         Jsonb jsonb = JsonbBuilder.create();
-        Filter filterAddCT = (request, response) -> {
+        Filter addContTypeJson = (request, response) -> {
             response.type("application/json;charset=UTF-8");
         };
 
@@ -43,9 +43,8 @@ public class HelloWorld {
          */
         path("/api/fact", () -> {
             //todo можно обойтись одним фильтром?
-            //before(filterAddCT);
-            before("", filterAddCT);
-            before("/*", filterAddCT);
+            before("", addContTypeJson);
+            before("/*", addContTypeJson);
 
             get("", fc::getAll, jsonb::toJson);
             post("", fc::create, jsonb::toJson);
