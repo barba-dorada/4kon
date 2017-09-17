@@ -18,6 +18,8 @@ import java.io.Reader;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.YearMonth;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -39,25 +41,26 @@ public class Quickstart {
         List<GHRow> factsList = readAndExtractFacts(values);
 
         //testLera(factsList);
-        for (Month month : Month.values()) {
+        for(YearMonth ym=YearMonth.of(2017,Month.FEBRUARY);ym.isBefore(YearMonth.of(2017,Month.OCTOBER));ym=ym.plus(1, ChronoUnit.MONTHS)){
 
-            testVad(factsList, month);
+            testVad(factsList, ym);
         }
 
 
     }
 
-    private static void testVad(List<GHRow> factsList, Month month) throws IOException {
+    private static void testVad(List<GHRow> factsList, YearMonth ym) throws IOException {
 
+        System.out.printf("\n== analize period %s ==\n",ym);
         List<GHRow> rrr = factsList.stream()
                 .filter(r -> r.acc.equalsIgnoreCase("в.тинькоф"))
-                .filter(r -> r.date.getMonth() == month)
+                .filter(r -> r.date.getMonth() == ym.getMonth() && r.date.getYear()==ym.getYear())
                 .collect(toList());
 
         List<Row> res = getRowsFromCsv("/csv/v/operations_all.csv");
 
         List<Row> res2 = res.stream()
-                .filter(r -> r.getOperationDate().getMonth() == month)
+                .filter(r -> r.getOperationDate().getMonth() == ym.getMonth()&& r.getOperationDate().getYear()==ym.getYear())
                 .filter(r -> r.getStatus().equals("OK"))
                 .filter(r -> r.getCardNumber().equals("*9819") || r.getCardNumber().equals(""))
                 .collect(toList());
@@ -74,7 +77,7 @@ public class Quickstart {
 
         BigDecimal c1 = print(b);
         BigDecimal c2 = print2(a);
-        System.out.printf("c1-c2: %s", c1.subtract(c2));
+        System.out.printf("c1-c2: %s\n", c1.subtract(c2));
 
     }
 
@@ -197,7 +200,7 @@ public class Quickstart {
 
         // Лера тинькоф август
         Month month = Month.AUGUST;
-        testVad(factsList, month);
+       // testVad(factsList, month);
 
 
        /* values = s.readRange("'остатки'!B2:C13");
