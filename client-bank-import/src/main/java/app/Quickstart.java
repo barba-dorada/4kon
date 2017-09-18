@@ -238,6 +238,7 @@ public class Quickstart {
                 r.sunc = (String) value.get(3);
                 if (value.get(4) instanceof BigDecimal) {
                     r.sum = (BigDecimal) value.get(4);
+                    r.sum=r.sum.setScale(2, BigDecimal.ROUND_HALF_UP);
                 }
                 r.description = value.get(5).toString();
                 r.sumAfter = (BigDecimal) value.get(6);
