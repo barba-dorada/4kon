@@ -144,6 +144,12 @@ public class Quickstart {
         pairs.add(new Pair<>(r -> "продукты".equals(r.sunc), r -> r.getCategory().contains("Супермаркеты")));
         pairs.add(new Pair<>(r -> "%%".equals(r.sunc), r -> r.getCategory().contains("Другое")));
         pairs.add(new Pair<>(r -> "зарплата".equals(r.sunc), r -> r.getCategory().contains("Финан. услуги")));
+        pairs.add(new Pair<>(r -> "перевод".equals(r.sunc), r -> r.getCategory().contains("Наличные")));
+        pairs.add(new Pair<>(r -> "одежда".equals(r.sunc), r -> r.getCategory().contains("Одежда, обувь")));
+        pairs.add(new Pair<>(r -> "связь".equals(r.sunc), r -> r.getCategory().contains("Мобильные/иб")));
+        pairs.add(new Pair<>(r -> "связь".equals(r.sunc), r -> r.getCategory().contains("Интернет, voip/иб")));
+        pairs.add(new Pair<>(r -> "транспорт".equals(r.sunc), r -> r.getCategory().contains("Транспорт")));
+        pairs.add(new Pair<>(r -> "ресторан".equals(r.sunc), r -> r.getCategory().contains("Фастфуд")&& r.getDescription().contains("McDonald's")));
 
         for (Pair<Predicate<GHRow>, Predicate<Row>> pair : pairs) {
 
